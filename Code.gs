@@ -50,7 +50,7 @@ function deprovisionDevice() {
   // AdminDirectory.Chromeosdevice.action() メソッドを呼び出して、COMPANY_OWNED_SERIALS 配列に記載された Chromebook 以外をデプロビジョニング（登録解除）します。
   // https://developers.google.com/admin-sdk/directory/reference/rest/v1/chromeosdevices/action?hl=ja
   response.chromeosdevices.filter(device => !COMPANY_OWNED_SERIALS.includes(device.serialNumber)).forEach(device => {
-    Logger.log(`Serial Number (${device.serialNumber}) は、会社が支給した端末ではありません。この端末を Powerwash して、かつ、登録を解除します。${isTestMode ? "テストモードのため、実際には操作は実行されません。isTestMode フラグを false に設定して、再度実行すると、すべての Chromebook の登録が解除されます。" : ""}`);
+    Logger.log(`Serial Number (${device.serialNumber}) は、会社が支給した端末ではありません。この端末を Powerwash して、端末の登録を解除します。${isTestMode ? "テストモードのため、実際には操作は実行されません。isTestMode フラグを false に設定して、再度実行すると、すべての Chromebook の登録が解除されます。" : ""}`);
     if (!isTestMode) {
       AdminDirectory.Customer.Devices.Chromeos.issueCommand({ "commandType": "REMOTE_POWERWASH", }, CUSTOMER_ID, device.deviceId);
       AdminDirectory.Chromeosdevices.action({ "action": "deprovision", "deprovisionReason": "different_model_replacement" }, CUSTOMER_ID, device.deviceId);
