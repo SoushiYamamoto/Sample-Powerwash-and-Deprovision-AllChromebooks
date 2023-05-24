@@ -1,3 +1,28 @@
+### What is it?
+* This sample code demonstrates how to use Apps Script to powerwash and deprovision (unregister) all Chromebooks registered in the Google Admin Console, excluding those whose serial numbers are specified in the COMPANY_OWNED_SERIALS variable.
+* To execute this sample code, you need an admin account in the Google Admin Console and admin rights to all the Chromebooks.
+This sample code is released under the MIT License, so its use, duplication, modification, and redistribution are free. No copyright notice, which is typically required by the MIT License, is needed.
+* As this is under the MIT License, the creator of this sample code does not provide any warranty.
+This sample code will powerwash and unregister all Chromebooks registered in the Google Admin Console. Please be careful when executing it. Avoid using it directly in a production environment and ensure thorough testing on your end. This sample code should serve as a reference for testing environments.
+
+### Instructions
+1. Download Code.gs from GitHub.
+2. Open Apps Script.
+3. Click on [ New Project ], and input a name for your project.
+4. Click the [ + ] on the right side of [ Services ], and select [ Admin SDK API ].
+5. Click [ Add ].
+6. Paste the entire content of Code.gs.
+7. Replace the CUSTOMER_ID in the source code, referring to this help article.
+8. Add the serial numbers of the devices you don't want to deprovision to COMPANY_OWNED_SERIALS in the source code, stored as an array.
+9. Click [ Run ].
+10. Check the [ Execution log ] to confirm that the intended devices have been deprovisioned.
+11. Set the isTestMode flag in the source code to false.
+12. After thorough verification, click [ Run ] at your own risk.
+13. The registration of the Chromebooks will be cancelled.
+14. Go to Google Admin Console > [ Devices ] > [ Chrome ] > [ Devices ] and set the filter to "deprovisioned".
+15. Verify that the relevant devices have been deprovisioned.
+
+
 ### 概要
 
 * このサンプルコードは、Apps Script を使用して、Google 管理コンソールに登録されているすべての Chromebook （COMPANY_OWNED_SERIALS 変数にシリアル番号の記載があるものを除く）を Powerwash して、登録解除（デプロビジョニング）する方法を示しています。
