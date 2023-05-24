@@ -6,7 +6,7 @@ This sample code is released under the MIT License, so its use, duplication, mod
 This sample code will powerwash and unregister all Chromebooks registered in the Google Admin Console. Please be careful when executing it. Avoid using it directly in a production environment and ensure thorough testing on your end. This sample code should serve as a reference for testing environments.
 
 ### Instructions
-1. Download Code.gs from GitHub.
+1. Download [Code.gs](https://github.com/SoushiYamamoto/Sample-Powerwash-and-Deprovision-AllChromebooks/blob/main/Code.gs) from GitHub.
 2. Open Apps Script.
 3. Click on [ New Project ], and input a name for your project.
 4. Click the [ + ] on the right side of [ Services ], and select [ Admin SDK API ].
@@ -32,7 +32,7 @@ This sample code will powerwash and unregister all Chromebooks registered in the
 * Google 管理コンソールに登録されているすべての Chromebook を Powerwash および登録解除しますので、実行には注意が必要です。本番環境でのコピペでのご使用はお控えいただき、ご自身で充分に検証をしてください。本サンプルコードは、検証環境でのサンプルコードとして参考にしてください。
 
 ### 手順
-1. Code.gs を GitHub からダウンロードします。
+1. [Code.gs](https://github.com/SoushiYamamoto/Sample-Powerwash-and-Deprovision-AllChromebooks/blob/main/Code.gs) を GitHub からダウンロードします。
 2. Apps Script を開きます。
 3. [ 新しいプロジェクト ] をクリックし、プロジェクトの名前を入力します。
 4. [ サービス ] の右側の [ + ] をクリックし、[ Admin SDK API ] を選択します。
